@@ -12,29 +12,7 @@ import org.springframework.jdbc.core.simple.SimpleJdbcCall;
 import org.springframework.stereotype.Component;
 
 @Component
-public class ProductDao {
-
-
-	// HikariCP DataSource
-	private static HikariDataSource dataSource;
-
-	// Initialize the HikariCP DataSource
-	static {
-		HikariConfig config = new HikariConfig();
-		config.setJdbcUrl(
-				"jdbc:mysql://localhost:3306/mall?serverTimezone=America/Chicago&characterEncoding=utf-8");
-		config.setUsername("root");
-		config.setPassword("password");
-		config.setDriverClassName("com.mysql.cj.jdbc.Driver");
-
-		// Optional HikariCP configuration settings
-		config.setMaximumPoolSize(10);
-		config.setConnectionTimeout(30000);
-		config.setIdleTimeout(600000);
-		config.setMaxLifetime(1800000);
-
-		dataSource = new HikariDataSource(config);
-	}
+public class ProductDao extends DBConnect{
 
 	public Product getProductById(Integer productId) {
 
