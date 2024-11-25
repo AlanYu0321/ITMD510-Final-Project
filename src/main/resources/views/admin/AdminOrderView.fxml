@@ -18,7 +18,7 @@
       <TableColumn fx:id="quantity" prefWidth="60" text="Quantity"/>
       <TableColumn fx:id="totalPrice" prefWidth="60" text="Total Price"/>
       <TableColumn fx:id="custName" prefWidth="80" text="Customer Name"/>
-      <TableColumn fx:id="custId" prefWidth="80" text="Customer Id"/>
+      <TableColumn fx:id="userId" prefWidth="80" text="Customer Id"/>
       <TableColumn fx:id="createDate" prefWidth="60" text="Create Date"/>
       <TableColumn fx:id="amendDate" prefWidth="60" text="Amend Date"/>
     </columns>

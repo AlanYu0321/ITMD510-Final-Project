@@ -61,7 +61,7 @@ public class OrderController {
 	@FXML
 	private TableColumn<Order, String> custName;
 	@FXML
-	private TableColumn<Order, Integer> custId;
+	private TableColumn<Order, Integer> userId;
 	@FXML
 	private TableColumn<Order, Date> createDate;
 	@FXML
@@ -78,7 +78,7 @@ public class OrderController {
 		quantity.setCellValueFactory(new PropertyValueFactory<>("quantity"));
 		totalPrice.setCellValueFactory(new PropertyValueFactory<>("totalPrice"));
 		custName.setCellValueFactory(new PropertyValueFactory<>("custName"));
-		custId.setCellValueFactory(new PropertyValueFactory<>("custId"));
+		userId.setCellValueFactory(new PropertyValueFactory<>("userId"));
 		createDate.setCellValueFactory(new PropertyValueFactory<>("createDate"));
 		amendDate.setCellValueFactory(new PropertyValueFactory<>("amendDate"));
 
@@ -100,7 +100,7 @@ public class OrderController {
 		quantity.setCellValueFactory(new PropertyValueFactory<>("quantity"));
 		totalPrice.setCellValueFactory(new PropertyValueFactory<>("totalPrice"));
 		custName.setCellValueFactory(new PropertyValueFactory<>("custName"));
-		custId.setCellValueFactory(new PropertyValueFactory<>("custId"));
+		userId.setCellValueFactory(new PropertyValueFactory<>("userId"));
 		createDate.setCellValueFactory(new PropertyValueFactory<>("createDate"));
 		amendDate.setCellValueFactory(new PropertyValueFactory<>("amendDate"));
 

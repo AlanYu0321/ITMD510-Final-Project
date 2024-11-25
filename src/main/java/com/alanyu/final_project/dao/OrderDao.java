@@ -56,7 +56,7 @@ public class OrderDao extends DBConnect{
 						order.getProductName()).addValue("i_product_id", order.getProductId())
 				.addValue("i_price", order.getPrice())
 				.addValue("i_quantity", order.getQuantity())
-				.addValue("i_cust_name", order.getCustName()).addValue("i_cust_id", order.getUserId());
+				.addValue("i_cust_name", order.getCustName()).addValue("i_user_id", order.getUserId());
 		Map<String, Object> out = simpleJdbcCall.execute(in);
 		Integer orderId = (Integer) out.get("o_order_id");
 
@@ -89,7 +89,7 @@ public class OrderDao extends DBConnect{
 						order.getProductName()).addValue("i_product_id", order.getOrderId())
 				.addValue("i_price", order.getPrice())
 				.addValue("i_quantity", order.getQuantity())
-				.addValue("i_cust_id", order.getUserId())
+				.addValue("i_user_id", order.getUserId())
 				.addValue("i_cust_name", order.getCustName());
 		Map<String, Object> out = simpleJdbcCall.execute(in);
 		List<Order> orderList = (List<Order>) out.get("o_order_list");
