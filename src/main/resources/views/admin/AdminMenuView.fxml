@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+  fx:controller="com.alanyu.final_project.controllers.AdminController" spacing="20"
+  alignment="CENTER" prefWidth="600" prefHeight="600" styleClass="menu-container"
+  stylesheets="@../css/style.css">
+  <Label text="Main Menu" styleClass="menu-title"/>
+
+  <Button text="Product Page" fx:id="productButton" styleClass="menu-button" prefWidth="150"
+    prefHeight="50" onAction="#navigateToProduct"/>
+  <Button text="Order Page" fx:id="orderButton" styleClass="menu-button" prefWidth="150"
+    prefHeight="50" onAction="#navigateToOrder"/>
+  <Button text="User Page" fx:id="userButton" styleClass="menu-button" prefWidth="150"
+    prefHeight="50" onAction="#navigateToUser"/>
+  <Button text="Log out" fx:id="logoutButton" styleClass="menu-button" prefWidth="150"
+    prefHeight="50" onAction="#navigateToLogOut"/>
+</VBox>

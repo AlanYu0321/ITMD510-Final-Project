@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<VBox alignment="CENTER" spacing="10" xmlns:fx="http://javafx.com/fxml/1"
+  xmlns="http://javafx.com/javafx/17.0.2-ea"
+  fx:controller="com.alanyu.final_project.controllers.ProductController"
+  stylesheets="@../css/login.css">
+  <TableView fx:id="productTable" prefHeight="300" prefWidth="610" editable="true">
+    <columns>
+      <TableColumn fx:id="productId" prefWidth="60" text="ID"/>
+      <TableColumn fx:id="productName" prefWidth="60" text="Name"/>
+      <TableColumn fx:id="category" prefWidth="60" text="Category"/>
+      <TableColumn fx:id="image_url" prefWidth="60" text="imageUrl"/>
+      <TableColumn fx:id="price" prefWidth="60" text="Price"/>
+      <TableColumn fx:id="stock" prefWidth="60" text="Stock"/>
+      <TableColumn fx:id="description" prefWidth="80" text="Description"/>
+      <TableColumn fx:id="createDate" prefWidth="80" text="CreateDate"/>
+      <TableColumn fx:id="amendDate" prefWidth="80" text="AmendDate"/>
+    </columns>
+  </TableView>
+
+  <!-- Buttons on the right -->
+  <HBox spacing="10" alignment="CENTER" prefWidth="150" styleClass="button-container">
+    <Button text="Add" fx:id="addButton" prefWidth="70" styleClass="action-button"
+      onAction="#directToAddProduct"/>
+    <Button text="Edit" fx:id="editButton" prefWidth="70" styleClass="action-button"
+      onAction="#directToUpdateProduct"/>
+    <Button text="Delete" fx:id="deleteButton" prefWidth="70" styleClass="action-button"
+      onAction="#deleteSelectedProduct"/>
+    <Button text="order" fx:id="orderButton" prefWidth="70" styleClass="action-button"
+      onAction="#directOrderProduct"/>
+  </HBox>
+
+  <HBox spacing="10">
+    <Button text="Back" onAction="#directToAdminMenu"/>
+    <Button text="List All Product" onAction="#listAllProduct"/>
+  </HBox>
+</VBox>

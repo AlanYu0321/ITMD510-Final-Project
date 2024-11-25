@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" spacing="10" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.2-ea" fx:controller="com.alanyu.final_project.controllers.UserController" stylesheets="@../css/login.css">
+  <TableView fx:id="userTable" prefHeight="300" prefWidth="610" >
+    <columns>
+      <TableColumn fx:id="userId" prefWidth="70" text="ID" />
+      <TableColumn fx:id="account" prefWidth="70" text="Account" />
+      <TableColumn fx:id="password" prefWidth="70" text="Password" />
+      <TableColumn fx:id="first_name" prefWidth="75" text="First_Name" />
+      <TableColumn fx:id="last_name" prefWidth="75" text="Last_Name" />
+      <TableColumn fx:id="admin_access" prefWidth="70" text="Admin_Access" />
+      <TableColumn fx:id="createDate" prefWidth="80" text="CreateDate" />
+      <TableColumn fx:id="amendDate" prefWidth="80" text="AmendDate" />
+    </columns>
+  </TableView>
+
+  <!-- Buttons on the right -->
+  <HBox spacing="10" alignment="CENTER" prefWidth="150" styleClass="button-container">
+    <Button text="Add" fx:id="addButton" prefWidth="70" styleClass="action-button" onAction="#directToAdminAddUser"/>
+    <Button text="Edit" fx:id="editButton" prefWidth="70" styleClass="action-button" onAction="#directToAdminUpdateUser"/>
+    <Button text="Delete" fx:id="deleteButton" prefWidth="70" styleClass="action-button" onAction="#deleteSelectedUser"/>
+    <Button text="Refresh" fx:id="refreshButton" prefWidth="70" styleClass="action-button" onAction="#listAllUser"/>
+  </HBox>
+
+  <HBox spacing="10">
+    <Button text="Back" onAction="#directToAdminMenu" />
+    <Button text="List All User" onAction="#listAllUser" />
+  </HBox>
+</VBox>

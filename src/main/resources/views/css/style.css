@@ -1,0 +1,57 @@
+.root {
+  -fx-background-color: #f5f5f5;
+  -fx-padding: 20px;
+}
+
+.title {
+  -fx-font-size: 24px;
+  -fx-font-weight: bold;
+  -fx-text-fill: #333;
+}
+
+.data {
+  -fx-font-size: 18px;
+  -fx-text-fill: #666;
+}
+
+.fetch-button {
+  -fx-background-color: #4CAF50;
+  -fx-text-fill: white;
+  -fx-font-weight: bold;
+  -fx-padding: 10px 20px;
+  -fx-border-radius: 5px;
+  -fx-background-radius: 5px;
+}
+
+.fetch-button:hover {
+  -fx-background-color: #45a049;
+}
+
+/* Container styling */
+.menu-container {
+  -fx-background-color: #f5f5f5;
+  -fx-padding: 20;
+  -fx-border-color: #cccccc;
+  -fx-border-width: 2;
+  -fx-border-radius: 10;
+  -fx-background-radius: 10;
+}
+
+/* Title styling */
+.menu-title {
+  -fx-font-size: 24px;
+  -fx-font-weight: bold;
+  -fx-text-fill: #333333;
+}
+
+/* Button styling */
+.menu-button {
+  -fx-text-fill: black;
+  -fx-font-size: 16px;
+  -fx-font-weight: bold;
+  -fx-padding: 10 20;
+  -fx-border-radius: 5;
+  -fx-background-radius: 5;
+  -fx-border-width: 20;
+}
+

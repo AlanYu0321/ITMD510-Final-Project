@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.layout.HBox?>
+<VBox xmlns:fx="http://javafx.com/fxml"
+  fx:controller="com.alanyu.final_project.controllers.OrderController" alignment="CENTER"
+  spacing="15" stylesheets="@../css/login.css">
+
+  <!-- Insert Order Details -->
+  <HBox spacing="10">
+    <Label text="Prodcut Name:"/>
+    <TextField fx:id="productNameField"/>
+  </HBox>
+
+  <HBox spacing="10">
+    <Label text="Product Id:"/>
+    <TextField fx:id="productIdField"/>
+  </HBox>
+
+  <HBox spacing="10">
+    <Label text="Price:"/>
+    <TextField fx:id="priceField"/>
+  </HBox>
+
+  <HBox spacing="10">
+    <Label text="Qty:"/>
+    <TextField fx:id="quantityField"/>
+  </HBox>
+
+  <HBox spacing="10">
+    <Label text="Cust Name:"/>
+    <TextField fx:id="custNameField"/>
+  </HBox>
+
+  <HBox spacing="10">
+    <Label text="Cust Id:"/>
+    <TextField fx:id="custIdField"/>
+  </HBox>
+
+  <HBox spacing="10">
+    <Button text="Back" onAction="#directToCustProduct"/>
+    <Button text="Add Order" onAction="#insertCustOrder"/>
+  </HBox>
+</VBox>
