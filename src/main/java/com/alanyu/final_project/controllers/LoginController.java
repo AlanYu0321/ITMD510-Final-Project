@@ -8,6 +8,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -42,6 +43,7 @@ public class LoginController {
 		if (isValidCredentials(username, password)) {
 			errorMessage.setText("Login successful!");
 			errorMessage.setStyle("-fx-text-fill: green;");
+			showAlert("Login", "Login successful!");
 
 			try {
 
@@ -80,6 +82,7 @@ public class LoginController {
 		} else {
 			errorMessage.setText("Invalid username or password");
 			errorMessage.setStyle("-fx-text-fill: red;");
+			showAlert("Login", "Invalid username or password");
 		}
 	}
 
@@ -93,4 +96,13 @@ public class LoginController {
 
 		return false;
 	}
+
+	private void showAlert(String title, String content) {
+		Alert alert = new Alert(Alert.AlertType.INFORMATION);
+		alert.setTitle(title);
+		alert.setHeaderText(null);
+		alert.setContentText(content);
+		alert.showAndWait();
+	}
+
 }
