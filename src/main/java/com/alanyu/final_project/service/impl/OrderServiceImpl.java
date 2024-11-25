@@ -18,8 +18,8 @@ public class OrderServiceImpl implements OrderService {
 	}
 
 	@Override
-	public List<Order> getOrderByCustId(Integer custId) {
-		return orderDao.getOrderByCustId(custId);
+	public List<Order> getOrderByUserId(Integer userId) {
+		return orderDao.getOrderByUserId(userId);
 	}
 
 	@Override

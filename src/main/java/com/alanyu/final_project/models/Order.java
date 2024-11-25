@@ -13,7 +13,7 @@ public class Order {
 	private Integer quantity;
 	private Integer totalPrice;
 	private String custName;
-	private Integer custId;
+	private Integer userId;
 	private Date createDate;
 	private Date amendDate;
 

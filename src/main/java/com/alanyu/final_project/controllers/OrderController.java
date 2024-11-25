@@ -104,7 +104,7 @@ public class OrderController {
 		createDate.setCellValueFactory(new PropertyValueFactory<>("createDate"));
 		amendDate.setCellValueFactory(new PropertyValueFactory<>("amendDate"));
 
-		List<Order> orders = orderService.getOrderByCustId(LoginController.user.getUserId());
+		List<Order> orders = orderService.getOrderByUserId(LoginController.user.getUserId());
 
 		ObservableList<Order> orderList = FXCollections.observableArrayList(orders);
 		orderTable.setItems(orderList);
@@ -120,7 +120,7 @@ public class OrderController {
 		order.setPrice(Integer.valueOf(priceField.getText()));
 		order.setQuantity(Integer.valueOf(quantityField.getText()));
 		order.setCustName(custNameField.getText());
-		order.setCustId(Integer.valueOf(custIdField.getText()));
+		order.setUserId(Integer.valueOf(custIdField.getText()));
 		orderService.insertOrder(order);
 		Product product = productService.getProductById(order.getProductId());
 		product.setStock(product.getStock() - order.getQuantity());
@@ -139,7 +139,7 @@ public class OrderController {
 		order.setPrice(Integer.valueOf(priceField.getText()));
 		order.setQuantity(Integer.valueOf(quantityField.getText()));
 		order.setCustName(custNameField.getText());
-		order.setCustId(Integer.valueOf(custIdField.getText()));
+		order.setUserId(Integer.valueOf(custIdField.getText()));
 		orderService.insertOrder(order);
 		Product product = productService.getProductById(order.getProductId());
 		product.setStock(product.getStock() - order.getQuantity());
@@ -173,7 +173,7 @@ public class OrderController {
 		order.setPrice(Integer.valueOf(priceField.getText()));
 		order.setQuantity(Integer.valueOf(quantityField.getText()));
 		order.setCustName(custNameField.getText());
-		order.setCustId(Integer.valueOf(custIdField.getText()));
+		order.setUserId(Integer.valueOf(custIdField.getText()));
 		orderService.updateOrderById(order);
 
 		showAlert("Success", "Product update successfully.");
@@ -189,7 +189,7 @@ public class OrderController {
 		order.setPrice(Integer.valueOf(priceField.getText()));
 		order.setQuantity(Integer.valueOf(quantityField.getText()));
 		order.setCustName(custNameField.getText());
-		order.setCustId(Integer.valueOf(custIdField.getText()));
+		order.setUserId(Integer.valueOf(custIdField.getText()));
 		orderService.updateOrderById(order);
 
 		showAlert("Success", "Product update successfully.");
@@ -313,7 +313,7 @@ public class OrderController {
 		priceField.setText(String.valueOf(order.getPrice()));
 		quantityField.setText(String.valueOf(order.getQuantity()));
 		custNameField.setText(order.getCustName());
-		custIdField.setText(String.valueOf(order.getCustId()));
+		custIdField.setText(String.valueOf(order.getUserId()));
 	}
 
 }
