@@ -12,9 +12,10 @@ public class DBConnect {
 	static {
 		HikariConfig config = new HikariConfig();
 		config.setJdbcUrl(
-				"jdbc:mysql://localhost:3306/mall?serverTimezone=America/Chicago&characterEncoding=utf-8");
-		config.setUsername("root");
-		config.setPassword("password");
+//				"jdbc:mysql://localhost:3306/mall?serverTimezone=America/Chicago&characterEncoding=utf-8");
+				"jdbc:mysql://www.papademas.net:3307/510fp?autoReconnect=true&useSSL=false");
+		config.setUsername("fp510");
+		config.setPassword("510");
 		config.setDriverClassName("com.mysql.cj.jdbc.Driver");
 
 		// Optional HikariCP configuration settings

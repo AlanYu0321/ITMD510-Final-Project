@@ -13,7 +13,7 @@ public class OrderDao extends DBConnect{
 	public Order getOrderById(Integer orderId) {
 
 		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(dataSource).withProcedureName(
-				"SP_GET_ORDER_BY_ID").returningResultSet("o_order", new OrderRowMapper());
+				"TYU17_SP_GET_ORDER_BY_ID").returningResultSet("o_order", new OrderRowMapper());
 
 		SqlParameterSource in = new MapSqlParameterSource().addValue("i_order_id", orderId);
 		Map<String, Object> out = simpleJdbcCall.execute(in);
@@ -25,7 +25,7 @@ public class OrderDao extends DBConnect{
 	public List<Order> getOrderByUserId(Integer userId) {
 
 		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(dataSource).withProcedureName(
-				"SP_GET_ORDER_BY_USER_ID").returningResultSet("o_order", new OrderRowMapper());
+				"TYU17_SP_GET_ORDER_BY_USER_ID").returningResultSet("o_order", new OrderRowMapper());
 
 		SqlParameterSource in = new MapSqlParameterSource().addValue("i_user_id", userId);
 		Map<String, Object> out = simpleJdbcCall.execute(in);
@@ -37,7 +37,7 @@ public class OrderDao extends DBConnect{
 	public List<Order> getAllProduct() {
 
 		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(dataSource).withProcedureName(
-				"SP_GET_ALL_ORDER").returningResultSet("o_order_list", new OrderRowMapper());
+				"TYU17_SP_GET_ALL_ORDER").returningResultSet("o_order_list", new OrderRowMapper());
 
 		SqlParameterSource in = new MapSqlParameterSource();
 		Map<String, Object> out = simpleJdbcCall.execute(in);
@@ -50,7 +50,7 @@ public class OrderDao extends DBConnect{
 	public Integer insertOrder(Order order) {
 
 		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(dataSource).withProcedureName(
-				"SP_INSERT_ORDER").returningResultSet("o_order", new OrderRowMapper());
+				"TYU17_SP_INSERT_ORDER").returningResultSet("o_order", new OrderRowMapper());
 
 		SqlParameterSource in = new MapSqlParameterSource().addValue("i_product_name",
 						order.getProductName()).addValue("i_product_id", order.getProductId())
@@ -66,7 +66,7 @@ public class OrderDao extends DBConnect{
 	public Order deleteProduct(Integer orderId) {
 
 		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(dataSource).withProcedureName(
-				"SP_DELETE_ORDER_BY_ID").returningResultSet("o_order", new OrderRowMapper());
+				"TYU17_SP_DELETE_ORDER_BY_ID").returningResultSet("o_order", new OrderRowMapper());
 
 		SqlParameterSource in = new MapSqlParameterSource().addValue("i_order_id", orderId);
 		Map<String, Object> out = simpleJdbcCall.execute(in);
@@ -82,7 +82,7 @@ public class OrderDao extends DBConnect{
 	public Order updateProductById(Order order) {
 
 		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(dataSource).withProcedureName(
-				"SP_UPDATE_ORDER").returningResultSet("o_order_list", new OrderRowMapper());
+				"TYU17_SP_UPDATE_ORDER").returningResultSet("o_order_list", new OrderRowMapper());
 
 		SqlParameterSource in = new MapSqlParameterSource().addValue("i_order_id", order.getOrderId())
 				.addValue("i_product_name",

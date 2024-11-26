@@ -14,7 +14,7 @@ public class UserDao extends DBConnect{
 
 	public User getUserById(Integer userId) {
 		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(dataSource).withProcedureName(
-						"SP_GET_USER_BY_ID")
+						"TYU17_SP_GET_USER_BY_ID")
 				.returningResultSet("o_user", new UserRowMapper());
 
 		SqlParameterSource in = new MapSqlParameterSource().addValue("i_user_id", userId);
@@ -26,7 +26,7 @@ public class UserDao extends DBConnect{
 
 	public List<User> getUserList() {
 		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(dataSource).withProcedureName(
-						"SP_GET_USER_LIST")
+						"TYU17_SP_GET_USER_LIST")
 				.returningResultSet("o_user", new UserRowMapper());
 
 		SqlParameterSource in = new MapSqlParameterSource();
@@ -38,7 +38,7 @@ public class UserDao extends DBConnect{
 
 	public User getUserByAccount(String account) {
 		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(dataSource).withProcedureName(
-						"SP_GET_USER_BY_ACCOUNT")
+						"TYU17_SP_GET_USER_BY_ACCOUNT")
 				.returningResultSet("o_user", new UserRowMapper());
 
 		SqlParameterSource in = new MapSqlParameterSource().addValue("i_account", account);
@@ -50,7 +50,7 @@ public class UserDao extends DBConnect{
 
 	public Integer insertUser(User user) {
 		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(dataSource).withProcedureName(
-						"SP_INSERT_USER")
+						"TYU17_SP_INSERT_USER")
 				.returningResultSet("user", new UserRowMapper());
 
 		SqlParameterSource in = new MapSqlParameterSource().addValue("i_user_id", user.getUserId())
@@ -67,7 +67,7 @@ public class UserDao extends DBConnect{
 
 	public void deleteUser(Integer UserId) {
 		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(dataSource).withProcedureName(
-						"SP_DELETE_USER_BY_ID")
+						"TYU17_SP_DELETE_USER_BY_ID")
 				.returningResultSet("user", new UserRowMapper());
 
 		SqlParameterSource in = new MapSqlParameterSource().addValue("i_user_id", UserId);
@@ -76,7 +76,7 @@ public class UserDao extends DBConnect{
 
 	public User updateUserById(User user) {
 		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(dataSource).withProcedureName(
-						"SP_UPDATE_USER")
+						"TYU17_SP_UPDATE_USER")
 				.returningResultSet("o_user", new UserRowMapper());
 
 		SqlParameterSource in = new MapSqlParameterSource().addValue("i_user_id", user.getUserId())

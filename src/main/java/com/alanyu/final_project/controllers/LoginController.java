@@ -41,13 +41,15 @@ public class LoginController {
 		String password = passwordField.getText();
 
 		if (isValidCredentials(username, password)) {
-			errorMessage.setText("Login successful!");
-			errorMessage.setStyle("-fx-text-fill: green;");
-			showAlert("Login", "Login successful!");
 
 			try {
 
 				if (true == user.getAdmin_access()) {
+
+					errorMessage.setText("Admin Login successful!");
+					errorMessage.setStyle("-fx-text-fill: green;");
+					showAlert("Login", "Admin Login successful!");
+
 					FXMLLoader loader = new FXMLLoader(
 							getClass().getResource("/views/admin/AdminMenuView.fxml"));
 					Parent productRoot = loader.load();
@@ -61,6 +63,11 @@ public class LoginController {
 					stage.setTitle("Menu");
 
 				} else {
+
+					errorMessage.setText("Customer Login successful!");
+					errorMessage.setStyle("-fx-text-fill: green;");
+					showAlert("Login", "Customer Login successful!");
+
 					FXMLLoader loader = new FXMLLoader(
 							getClass().getResource("/views/customer/CustMenuView.fxml"));
 					Parent productRoot = loader.load();
