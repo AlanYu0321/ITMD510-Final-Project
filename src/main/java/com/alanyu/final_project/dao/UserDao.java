@@ -2,8 +2,6 @@ package com.alanyu.final_project.dao;
 
 import com.alanyu.final_project.models.User;
 import com.alanyu.final_project.rowMapper.UserRowMapper;
-import com.zaxxer.hikari.HikariConfig;
-import com.zaxxer.hikari.HikariDataSource;
 import java.util.List;
 import java.util.Map;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;

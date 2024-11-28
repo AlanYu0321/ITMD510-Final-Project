@@ -90,8 +90,8 @@ public class UserController {
 
 		userService.insertUser(user);
 
-		showAlert("Success", "Product insert successfully.");
-		loadPage("/views/admin/AdminUserView.fxml", "Product List", event);
+		showAlert("Success", "User insert successfully.");
+		loadPage("/views/admin/AdminUserView.fxml", "User List", event);
 	}
 
 	@FXML

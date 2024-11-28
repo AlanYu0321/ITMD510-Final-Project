@@ -1,5 +1,7 @@
 package com.alanyu.final_project;
 
+import static com.alanyu.final_project.dao.DBConnect.initialize;
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -25,6 +27,8 @@ public class JavaFxSpringApp extends Application {
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
+
+		initialize();
 
 		FXMLLoader loader = new FXMLLoader(getClass().getResource(
 				"/views/LoginView.fxml"));
